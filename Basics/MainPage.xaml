@@ -8,6 +8,23 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Select an option"
+                   HorizontalAlignment="Center"
+                   FontWeight="SemiBold"/>
 
+        <ScrollViewer Grid.Row="1"
+            Margin="0,20,0,0">
+            <StackPanel 
+                        HorizontalAlignment="Center">
+                <Button Name="TextHierachyButton"
+                        Content="Text Hierachy"
+                        Click="TextHierachyButton_Click"/>
+
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

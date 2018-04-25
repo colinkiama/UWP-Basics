@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="Basics.Examples.TextHierachy.BuiltInStyles"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Basics.Examples.TextHierachy"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    >
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+          Margin="12,20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+      
+        
+            <StackPanel>
+                <TextBlock Text="This is a header!"
+                   Style="{ThemeResource HeaderTextBlockStyle}"
+                   TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="I am a Subheader"
+                       Style="{ThemeResource SubheaderTextBlockStyle}"
+                        TextWrapping="WrapWholeWords"/>
+                <TextBlock Text="I am a title!"
+                           Style="{ThemeResource TitleTextBlockStyle}"/>
+                <TextBlock Text="I am a subtitle"
+                           Style="{ThemeResource SubtitleTextBlockStyle}"/>
+                <TextBlock Style="{ThemeResource BaseTextBlockStyle}"
+                           Text="I am a base"/>
+                <TextBlock Style="{ThemeResource BodyTextBlockStyle}"
+                           Text="I am a body"/>
+            </StackPanel>
+        <Button Grid.Row="1"
+                Content="Show custom style page"
+                Name="customStylePageButton"
+                Click="customStylePageButton_Click"/>
+    </Grid>
+</Page>
