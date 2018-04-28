@@ -11,7 +11,7 @@
 
     <RelativePanel Name="HexagonPanel">
         <Polygon Fill="Red"
-                             Points="0,50,25,0,50,50"
+                             Points="0,25,15,0,35,0,50,25,35,50,15,50"
                              Name="Hexagon"/>
         <StackPanel RelativePanel.RightOf="Hexagon"
                                 Margin="20,0,0,0">
