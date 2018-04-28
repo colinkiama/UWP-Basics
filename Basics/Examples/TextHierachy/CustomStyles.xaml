@@ -7,7 +7,33 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+          Margin="12,20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
 
+
+        <StackPanel>
+            <TextBlock Text="This is a header!"
+                   Style="{ThemeResource HeaderTextBlockStyle}"
+                   TextWrapping="WrapWholeWords"/>
+            <TextBlock Text="I am a Subheader"
+                       Style="{ThemeResource SubheaderTextBlockStyle}"
+                        TextWrapping="WrapWholeWords"/>
+            <TextBlock Text="I am a title!"
+                           Style="{ThemeResource TitleTextBlockStyle}"/>
+            <TextBlock Text="I am a subtitle"
+                           Style="{ThemeResource SubtitleTextBlockStyle}"/>
+            <TextBlock Style="{ThemeResource BaseTextBlockStyle}"
+                           Text="I am a base"/>
+            <TextBlock Style="{ThemeResource BodyTextBlockStyle}"
+                           Text="I am a body"/>
+        </StackPanel>
+        <Button Grid.Row="1"
+                Content="Show Built-in style page"
+                Name="BuiltInStyleButton"
+                Click="BuiltInStyleButton_Click"/>
     </Grid>
 </Page>

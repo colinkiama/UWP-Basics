@@ -5,36 +5,24 @@
     xmlns:local="using:Basics.Examples.TextHierachy"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:shapes="using:Basics.Controls.Shapes"
     mc:Ignorable="d"
     >
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
           Margin="12,20">
         <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-      
-        
+        <TextBlock Text="Shapes"
+                   Style="{ThemeResource TitleTextBlockStyle}"/>
+        <Grid Grid.Row="1"
+              Margin="0,20,0,0">
             <StackPanel>
-                <TextBlock Text="This is a header!"
-                   Style="{ThemeResource HeaderTextBlockStyle}"
-                   TextWrapping="WrapWholeWords"/>
-                <TextBlock Text="I am a Subheader"
-                       Style="{ThemeResource SubheaderTextBlockStyle}"
-                        TextWrapping="WrapWholeWords"/>
-                <TextBlock Text="I am a title!"
-                           Style="{ThemeResource TitleTextBlockStyle}"/>
-                <TextBlock Text="I am a subtitle"
-                           Style="{ThemeResource SubtitleTextBlockStyle}"/>
-                <TextBlock Style="{ThemeResource BaseTextBlockStyle}"
-                           Text="I am a base"/>
-                <TextBlock Style="{ThemeResource BodyTextBlockStyle}"
-                           Text="I am a body"/>
+                <shapes:TriangleInfo/>
             </StackPanel>
-        <Button Grid.Row="1"
-                Content="Show custom style page"
-                Name="customStylePageButton"
-                Click="customStylePageButton_Click"/>
+        </Grid>
     </Grid>
 </Page>

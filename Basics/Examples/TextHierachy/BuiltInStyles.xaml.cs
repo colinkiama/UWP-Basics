@@ -27,10 +27,11 @@ namespace Basics.Examples.TextHierachy
             this.InitializeComponent();
         }
 
-       
+
         private void customStylePageButton_Click(object sender, RoutedEventArgs e)
         {
 
             Frame.Navigate(typeof(CustomStyles));
+        }
     }
 }

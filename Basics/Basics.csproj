@@ -95,6 +95,18 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\Shapes\HexagonInfo.xaml.cs">
+      <DependentUpon>HexagonInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Shapes\PentagonInfo.xaml.cs">
+      <DependentUpon>PentagonInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Shapes\SquareInfo.xaml.cs">
+      <DependentUpon>SquareInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Shapes\TriangleInfo.xaml.cs">
+      <DependentUpon>TriangleInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Examples\TextHierachy\BuiltInStyles.xaml.cs">
       <DependentUpon>BuiltInStyles.xaml</DependentUpon>
     </Compile>
@@ -127,6 +139,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\Shapes\HexagonInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Shapes\PentagonInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Shapes\SquareInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Shapes\TriangleInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Examples\TextHierachy\BuiltInStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
