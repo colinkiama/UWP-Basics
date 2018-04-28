@@ -18,11 +18,18 @@
         </Grid.RowDefinitions>
         <TextBlock Text="Shapes"
                    Style="{ThemeResource TitleTextBlockStyle}"/>
-        <Grid Grid.Row="1"
-              Margin="0,20,0,0">
-            <StackPanel>
-                <shapes:TriangleInfo/>
-            </StackPanel>
-        </Grid>
+        <ScrollViewer Grid.Row="1">
+            <Grid Margin="0,20,0,0">
+                <StackPanel>
+                    <StackPanel.Resources>
+                        <Thickness x:Key="ShapeMargin">12</Thickness>
+                    </StackPanel.Resources>
+                    <shapes:TriangleInfo Margin="{StaticResource ShapeMargin}"/>
+                    <shapes:SquareInfo Margin="{StaticResource ShapeMargin}"/>
+                    <shapes:PentagonInfo Margin="{StaticResource ShapeMargin}"/>
+                    <shapes:HexagonInfo Margin="{StaticResource ShapeMargin}"/>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
     </Grid>
 </Page>
