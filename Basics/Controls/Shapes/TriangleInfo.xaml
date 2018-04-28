@@ -10,7 +10,7 @@
     d:DesignWidth="400">
 
     <RelativePanel Name="TrianglePanel">
-        <Polygon Fill="Red"
+        <Polygon Fill="{x:Bind Fill, Mode=TwoWay}"
                              Points="0,50,25,0,50,50"
                              Name="Triangle"/>
         <StackPanel RelativePanel.RightOf="Triangle"

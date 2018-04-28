@@ -24,7 +24,8 @@
                     <StackPanel.Resources>
                         <Thickness x:Key="ShapeMargin">12</Thickness>
                     </StackPanel.Resources>
-                    <shapes:TriangleInfo Margin="{StaticResource ShapeMargin}"/>
+                    <shapes:TriangleInfo Margin="{StaticResource ShapeMargin}"
+                                         Fill="Violet"/>
                     <shapes:SquareInfo Margin="{StaticResource ShapeMargin}"/>
                     <shapes:PentagonInfo Margin="{StaticResource ShapeMargin}"/>
                     <shapes:HexagonInfo Margin="{StaticResource ShapeMargin}"/>
