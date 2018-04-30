@@ -17,7 +17,8 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <TextBlock Text="Shapes"
-                   Style="{ThemeResource TitleTextBlockStyle}"/>
+                   Style="{ThemeResource TitleTextBlockStyle}"
+                   />
         <ScrollViewer Grid.Row="1">
             <Grid Margin="0,20,0,0">
                 <StackPanel>
@@ -25,10 +26,13 @@
                         <Thickness x:Key="ShapeMargin">12</Thickness>
                     </StackPanel.Resources>
                     <shapes:TriangleInfo Margin="{StaticResource ShapeMargin}"
-                                         Fill="Violet"/>
-                    <shapes:SquareInfo Margin="{StaticResource ShapeMargin}"/>
-                    <shapes:PentagonInfo Margin="{StaticResource ShapeMargin}"/>
-                    <shapes:HexagonInfo Margin="{StaticResource ShapeMargin}"/>
+                                         Fill="#f65314"/>
+                    <shapes:SquareInfo Margin="{StaticResource ShapeMargin}"
+                                       Fill="#7cbb00"/>
+                    <shapes:PentagonInfo Margin="{StaticResource ShapeMargin}"
+                                         Fill="#00a1f1"/>
+                    <shapes:HexagonInfo Margin="{StaticResource ShapeMargin}"
+                                        Fill="#ffbb00"/>
                 </StackPanel>
             </Grid>
         </ScrollViewer>

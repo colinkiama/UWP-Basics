@@ -19,6 +19,20 @@ namespace Basics.Controls.Shapes
 {
     public sealed partial class HexagonInfo : UserControl
     {
+        public SolidColorBrush Fill
+        {
+            get { return (SolidColorBrush)GetValue(FillProperty); }
+            set
+            {
+                SetValue(FillProperty, value);
+            }
+        }
+
+
+
+        // Using a DependencyProperty as the backing store for Fill.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty FillProperty =
+            DependencyProperty.Register("Fill", typeof(SolidColorBrush), typeof(HexagonInfo), null);
         public HexagonInfo()
         {
             this.InitializeComponent();

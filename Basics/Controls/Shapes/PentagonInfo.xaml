@@ -10,7 +10,7 @@
     d:DesignWidth="400">
 
     <RelativePanel Name="PentagonPanel">
-        <Polygon Fill="Red"
+        <Polygon Fill="{x:Bind Fill, Mode=TwoWay}"
                              Points="0,20,25,0,50,20,40,50,10,50"
                              Name="Pentagon"/>
         <StackPanel RelativePanel.RightOf="Pentagon"
