@@ -20,16 +20,16 @@ namespace Basics.Examples.TextHierachy
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class BuiltInStyles : Page
+    public sealed partial class ShapesExample : Page
     {
-        public BuiltInStyles()
+        public ShapesExample()
         {
             this.InitializeComponent();
         }
 
-        private void ShapesExampleButton_Click(object sender, RoutedEventArgs e)
+        private void builtInStylesButton_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(ShapesExample)); 
+            Frame.Navigate(typeof(BuiltInStyles));
         }
     }
 }

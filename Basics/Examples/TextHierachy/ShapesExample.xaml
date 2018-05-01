@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="Basics.Examples.TextHierachy.ShapesExample"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Basics.Examples.TextHierachy"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:shapes="using:Basics.Controls.Shapes"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+          Margin="12,20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Shapes"
+                   Style="{ThemeResource TitleTextBlockStyle}"
+                   Margin="12,0"/>
+        <ScrollViewer Grid.Row="1">
+            <Grid Margin="0,20,0,0">
+                <StackPanel>
+                    <StackPanel.Resources>
+                        <Thickness x:Key="ShapeMargin">12</Thickness>
+                    </StackPanel.Resources>
+                    <shapes:TriangleInfo Margin="{StaticResource ShapeMargin}"
+                                         Fill="#f65314"/>
+                    <shapes:SquareInfo Margin="{StaticResource ShapeMargin}"
+                                       Fill="#7cbb00"/>
+                    <shapes:PentagonInfo Margin="{StaticResource ShapeMargin}"
+                                         Fill="#00a1f1"/>
+                    <shapes:HexagonInfo Margin="{StaticResource ShapeMargin}"
+                                        Fill="#ffbb00"/>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+        <Button Name="builtInStylesButton"
+                Click="builtInStylesButton_Click"
+                Grid.Row="2"
+                Content="Show built-in TextBlock styles"/>
+    </Grid>
+</Page>

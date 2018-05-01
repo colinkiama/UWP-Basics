@@ -5,7 +5,6 @@
     xmlns:local="using:Basics.Examples.TextHierachy"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:shapes="using:Basics.Controls.Shapes"
     mc:Ignorable="d"
     >
 
@@ -16,25 +15,46 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Shapes"
+        <TextBlock Text="Built-in TextBlock Styles"
                    Style="{ThemeResource TitleTextBlockStyle}"
-                   />
+                   Margin="12,0"/>
         <ScrollViewer Grid.Row="1">
             <Grid Margin="0,20,0,0">
-                <StackPanel>
+                <StackPanel Margin="12,0">
                     <StackPanel.Resources>
-                        <Thickness x:Key="ShapeMargin">12</Thickness>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="TextWrapping"
+                                    Value="WrapWholeWords"/>
+                            
+                        </Style>
                     </StackPanel.Resources>
-                    <shapes:TriangleInfo Margin="{StaticResource ShapeMargin}"
-                                         Fill="#f65314"/>
-                    <shapes:SquareInfo Margin="{StaticResource ShapeMargin}"
-                                       Fill="#7cbb00"/>
-                    <shapes:PentagonInfo Margin="{StaticResource ShapeMargin}"
-                                         Fill="#00a1f1"/>
-                    <shapes:HexagonInfo Margin="{StaticResource ShapeMargin}"
-                                        Fill="#ffbb00"/>
+                    <TextBlock Style="{StaticResource HeaderTextBlockStyle}"
+                               Text="HeaderTextBlockStyle"
+                               Margin="0,2"/>
+                    <TextBlock Style="{StaticResource SubheaderTextBlockStyle}"
+                               Text="SubheaderTextBlockStyle"
+                               Margin="0,2"/>
+                    <TextBlock Style="{StaticResource TitleTextBlockStyle}"
+                               Text="TitleTextBlockStyle"
+                               Margin="0,2"/>
+                    <TextBlock Style="{StaticResource SubtitleTextBlockStyle}"
+                               Text="SubtitleTextBlockStyle"
+                               Margin="0,2"/>
+                    <TextBlock Style="{StaticResource BaseTextBlockStyle}"
+                               Text="BaseTextBlockStyle"
+                               Margin="0,2"/>
+                    <TextBlock Style="{StaticResource BodyTextBlockStyle}"
+                               Text="BodyTextBlockStyle"
+                               Margin="0,2"/>
+                    <TextBlock Style="{StaticResource CaptionTextBlockStyle}"
+                               Text="CaptionTextBlockStyle"
+                               Margin="0,2"/>
                 </StackPanel>
             </Grid>
         </ScrollViewer>
+        <Button Grid.Row="2"
+                Content="Show Shapes Example"
+                Name="ShapesExampleButton"
+                Click="ShapesExampleButton_Click"/>
     </Grid>
 </Page>

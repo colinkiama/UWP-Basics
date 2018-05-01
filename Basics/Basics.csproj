@@ -113,6 +113,9 @@
     <Compile Include="Examples\TextHierachy\CustomStyles.xaml.cs">
       <DependentUpon>CustomStyles.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Examples\TextHierachy\ShapesExample.xaml.cs">
+      <DependentUpon>ShapesExample.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -160,6 +163,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Examples\TextHierachy\CustomStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Examples\TextHierachy\ShapesExample.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
